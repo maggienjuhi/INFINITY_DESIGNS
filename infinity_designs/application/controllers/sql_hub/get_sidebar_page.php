@@ -1,0 +1,4 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+		//$data['appmodels_page'] = $this -> asset_database -> select_multiple_array("SELECT al.id,al.applist,al.app_description,al.apptype,al.icon_name,al.app_url,ml.id AS ml_id,ml.modelslist,ml.icon_name AS model_icon,ml.model_url FROM appmodels am,applist al,modelslist ml WHERE am.applist_id = al.id AND am.modelslist_id = ml.id AND ml.id = $ml_id ORDER BY al.position ASC;");
+$data['appmodels_page'] = $this -> asset_database -> select_multiple_array("SELECT al.id,al.applist,al.app_description,al.apptype,al.icon_name,al.app_url,ml.id AS ml_id,ml.modelslist,ml.icon_name AS model_icon,ml.model_url FROM appmodels am,applist al,modelslist ml WHERE am.applist_id = al.id AND am.modelslist_id = ml.id AND ml.id = 1 ORDER BY al.position ASC;");
